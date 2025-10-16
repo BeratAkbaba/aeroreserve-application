@@ -1,0 +1,18 @@
+server:
+  port: 8888 # Config server'lar için standart porttur
+
+spring:
+  application:
+    name: config-server # Eureka'daki adı
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/BeratAkbaba/aeroreserve-config.git
+          clone-on-start: true # Başlarken repoyu klonla
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/

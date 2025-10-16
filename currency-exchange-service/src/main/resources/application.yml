@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: currency-exchange-service
+  config:
+    import: "configserver:"
